@@ -1,0 +1,12 @@
+while(!feof($handler)){
+            $content = fgets($handler);
+            if (empty($content)) continue;
+            if (strpos($content, 'artikul') !== FALSE) continue;
+            $productData = explode(';', $content);
+            printf('<p>Товар %s с ценой %d в остаке %d</p>'
+                , $productData[0]
+                , $productData[1]
+                , $productData[2]
+            );
+        }
+        fclose($handler);

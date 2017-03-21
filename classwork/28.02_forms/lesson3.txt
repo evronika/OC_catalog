@@ -1,0 +1,22 @@
+API - Application Program Interface
+
+HTTP запросы
+
+- request
+- response
+
+Работа с формами
+
+- тег form
+ -- method - как передаются данные (post/get)
+ -- action - адрес скрипта обработчика
+
+ - $_REQUEST
+ - $_POST
+ - $_GET
+
+ Буферизация ob_
+ - ob_start - начнет буферизацию
+
+ $_SESSION
+ $_SERVER
