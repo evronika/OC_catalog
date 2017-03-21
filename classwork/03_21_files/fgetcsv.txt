@@ -1,0 +1,11 @@
+while(!feof($handler)){
+            $productData = fgetcsv($handler,0,';');
+            if (empty($productData[0])) continue;
+            if (strpos($productData[0], 'artikul') !== FALSE) continue;
+            printf('<p>Товар %s с ценой %d в остаке %d</p>'
+                , $productData[0]
+                , $productData[1]
+                , $productData[2]
+            );
+        }
+        fclose($handler);
